@@ -11,7 +11,10 @@
       "type": "Apache-2.0"
     }
   ],
-  "dependencies": {},
+  "extraIncludes":["mbed-hal-st-stm32f401re"],
+  "dependencies": {
+      "cmsis-core":"~0.1.0"
+      },
   "targetDependencies": {
       "nucleo-f401re" : {
           "mbed-hal-st-nucleo-f401re":"~0.0.0"
