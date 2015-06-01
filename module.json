@@ -1,0 +1,20 @@
+{
+  "name": "mbed-hal-st-stm32f401xe",
+  "version": "0.0.0",
+  "description": "mbed HAL for stm32f401xe microcontrollers",
+  "keywords": [],
+  "author": "Brendan Moran <brendan.moran@arm.com>",
+  "homepage": "",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "dependencies": {},
+  "targetDependencies": {
+      "nucleo-f401re" : {
+          "mbed-hal-st-nucleo-f401re":"~0.0.0"
+      }
+  }
+}
