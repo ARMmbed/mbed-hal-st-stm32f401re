@@ -1,7 +1,7 @@
 {
-  "name": "mbed-hal-st-stm32f401xe",
+  "name": "mbed-hal-st-stm32f401re",
   "version": "0.0.0",
-  "description": "mbed HAL for stm32f401xe microcontrollers",
+  "description": "mbed HAL for stm32f401re microcontrollers",
   "keywords": [],
   "author": "Brendan Moran <brendan.moran@arm.com>",
   "homepage": "",
