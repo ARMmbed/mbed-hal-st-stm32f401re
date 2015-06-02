@@ -13,7 +13,8 @@
   ],
   "extraIncludes":["mbed-hal-st-stm32f401re"],
   "dependencies": {
-      "cmsis-core":"~0.1.0"
+      "cmsis-core":"~0.1.0",
+      "uvisor-lib":"~0.6.0"
       },
   "targetDependencies": {
       "nucleo-f401re" : {
