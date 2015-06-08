@@ -1,10 +1,10 @@
 {
   "name": "mbed-hal-st-stm32f401re",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "mbed HAL for stm32f401re microcontrollers",
   "keywords": [],
   "author": "Brendan Moran <brendan.moran@arm.com>",
-  "homepage": "",
+  "homepage": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re",
   "licenses": [
     {
       "url": "https://spdx.org/licenses/Apache-2.0",
