@@ -1,0 +1,25 @@
+{
+  "name": "mbed-hal-st-stm32f401re",
+  "version": "0.0.0",
+  "description": "mbed HAL for the NUCLEO-F401RE development board",
+  "keywords": [
+    "mbed",
+    "hal",
+    "stm",
+    "f401re",
+    "nucleo"
+  ],
+  "author": "wolfgang.betz@st.com",
+  "repository": {
+    "url": "ssh://gitolite@codex.cro.st.com/x-nucleodev/mbed-hal-st-stm32f401re.git",
+    "type": "git"
+  },
+  "homepage": "http://www.st.com",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "dependencies": {}
+}
