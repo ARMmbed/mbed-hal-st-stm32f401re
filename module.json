@@ -1,7 +1,7 @@
 {
   "name": "mbed-hal-st-stm32f401re",
   "version": "0.0.0",
-  "description": "mbed HAL for the NUCLEO-F401RE development board",
+  "description": "AST's mbed HAL for the NUCLEO-F401RE development board",
   "keywords": [
     "mbed",
     "hal",
@@ -21,5 +21,10 @@
       "type": "Apache-2.0"
     }
   ],
-  "dependencies": {}
+  "extraIncludes": [
+    "mbed-hal-st-stm32f401re"
+  ],
+  "dependencies": {
+    "mbed-hal": "*"
+  }
 }
