@@ -77,7 +77,7 @@ defined in linker script */
   .weak  Reset_Handler
   .type  Reset_Handler, %function
 Reset_Handler:  
-  ldr   sp, =_estack    		 /* set stack pointer */
+  ldr   sp, =__stack       /* set stack pointer */
 
 /* Copy the data segment initializers from flash to SRAM */  
   movs  r1, #0
@@ -109,6 +109,8 @@ LoopFillZerobss:
 
 /* Call the clock system intitialization function.*/
   bl  SystemInit   
+/* Call uVisor initialization function. */
+  bl uvisor_init
 /* Call static constructors */
   //bl __libc_init_array
 /* Call the application's entry point.*/
@@ -145,8 +147,9 @@ Infinite_Loop:
   .size  g_pfnVectors, .-g_pfnVectors
     
 g_pfnVectors:
-  .word  _estack
+  .word  __stack
   .word  Reset_Handler
+
   .word  NMI_Handler
   .word  HardFault_Handler
   .word  MemManage_Handler

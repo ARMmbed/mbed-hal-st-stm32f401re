@@ -25,6 +25,7 @@
     "mbed-hal-st-stm32f401re"
   ],
   "dependencies": {
-    "mbed-hal": "*"
+    "cmsis-core": "*",
+    "uvisor-lib": "*"
   }
 }
