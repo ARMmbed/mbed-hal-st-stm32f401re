@@ -1,7 +1,7 @@
 {
   "name": "mbed-hal-st-stm32f401re",
-  "version": "0.0.0",
-  "description": "AST's mbed HAL for the NUCLEO-F401RE development board",
+  "version": "0.0.1",
+  "description": "mbed HAL for stm32f401re microcontrollers",
   "keywords": [
     "mbed",
     "hal",
