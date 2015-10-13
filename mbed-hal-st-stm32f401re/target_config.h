@@ -18,8 +18,8 @@
 
 // Minar platform configuration
 
-#define MINAR_PLATFORM_TIME_BASE  1000
-#define MINAR_PLATFORM_MINIMUM_SLEEP 1
+#define MINAR_PLATFORM_TIME_BASE  1282                   // ticks per second
+#define MINAR_PLATFORM_MINIMUM_SLEEP 2                   // in ticks
 
 #define MODULE_SIZE_SPI         4
 
