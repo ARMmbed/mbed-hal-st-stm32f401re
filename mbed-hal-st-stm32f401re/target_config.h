@@ -21,4 +21,9 @@
 #define MINAR_PLATFORM_TIME_BASE  1000
 #define MINAR_PLATFORM_MINIMUM_SLEEP 1
 
+#define MODULE_SIZE_SPI         4
+
+// Transaction queue size for each peripheral
+#define TRANSACTION_QUEUE_SIZE_SPI   16
+
 #endif
