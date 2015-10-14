@@ -24,7 +24,7 @@ if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
 else()
     set(STARTUP_ASM "")
     set(STARTUP_SRC "")
-    message(FATAL_ERROR "Unsupported target toolchain (gcc and armcc are supported)")
+    message(FATAL_ERROR "Unsupported target toolchain (only gcc is supported)")
 endif()
 
 
