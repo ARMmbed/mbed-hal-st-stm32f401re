@@ -24,7 +24,7 @@ if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
 else()
     set(STARTUP_ASM "")
     set(STARTUP_SRC "")
-    message(FATAL_ERROR "Unsupported target toolchain (gcc and armcc are supported)")
+    message(FATAL_ERROR "Unsupported target toolchain (only gcc is supported)")
 endif()
 
 
@@ -52,5 +52,4 @@ endif()
 target_link_libraries(mbed-hal-st-stm32f401re
     ${EXTRA_LINK_LIBS}
     mbed-hal
-    mbed-hal-st-nucleo-f401re
 )

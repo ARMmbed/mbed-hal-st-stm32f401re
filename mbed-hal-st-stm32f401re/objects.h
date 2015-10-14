@@ -34,6 +34,7 @@
 #include "PortNames.h"
 #include "PeripheralNames.h"
 #include "PinNames.h"
+#include "target_config.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -72,18 +73,13 @@ struct serial_s {
 };
 
 struct spi_s {
-    SPIName spi;
-    uint32_t bits;
-    uint32_t cpol;
-    uint32_t cpha;
-    uint32_t mode;
-    uint32_t order;
-    uint32_t nss;
-    uint32_t br_presc;
     PinName pin_miso;
     PinName pin_mosi;
     PinName pin_sclk;
     PinName pin_ssel;
+    uint32_t event;
+    uint8_t module;
+    uint8_t transfer_type;
 };
 
 struct i2c_s {
@@ -98,6 +94,10 @@ struct pwmout_s {
     uint32_t pulse;
     uint8_t channel;
     uint8_t inverted;
+};
+
+struct sleep_s {
+    TIM_HandleTypeDef TimMasterHandle;
 };
 
 #include "gpio_object.h"

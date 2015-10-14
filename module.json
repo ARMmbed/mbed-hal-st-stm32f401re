@@ -2,8 +2,18 @@
   "name": "mbed-hal-st-stm32f401re",
   "version": "0.0.1",
   "description": "mbed HAL for stm32f401re microcontrollers",
-  "keywords": [],
-  "author": "Brendan Moran <brendan.moran@arm.com>",
+  "keywords": [
+    "mbed",
+    "hal",
+    "stm",
+    "f401re",
+    "nucleo"
+  ],
+  "author": "wolfgang.betz@st.com",
+  "repository": {
+    "url": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re.git",
+    "type": "git"
+  },
   "homepage": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re",
   "licenses": [
     {
@@ -11,14 +21,11 @@
       "type": "Apache-2.0"
     }
   ],
-  "extraIncludes":["mbed-hal-st-stm32f401re"],
+  "extraIncludes": [
+    "mbed-hal-st-stm32f401re"
+  ],
   "dependencies": {
-      "cmsis-core":"~0.1.0",
-      "uvisor-lib":"~0.6.0"
-      },
-  "targetDependencies": {
-      "nucleo-f401re" : {
-          "mbed-hal-st-nucleo-f401re":"~0.0.0"
-      }
+    "cmsis-core": "*",
+    "uvisor-lib": "*"
   }
 }
