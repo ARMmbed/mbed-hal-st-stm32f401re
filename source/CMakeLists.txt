@@ -35,7 +35,6 @@ set_property(SOURCE ${STARTUP_ASM} PROPERTY LANGUAGE ASM)
 add_library(mbed-hal-st-stm32f401re
     ${STARTUP_ASM}
     ${STARTUP_SRC}
-    "lp_ticker.c"
     "PeripheralPins.c"
 )
 set_target_properties(mbed-hal-st-stm32f401re PROPERTIES
