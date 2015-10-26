@@ -24,7 +24,7 @@ if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
 else()
     set(STARTUP_ASM "")
     set(STARTUP_SRC "")
-    message(FATAL_ERROR "Unsupported target toolchain (gcc and armcc are supported)")
+    message(FATAL_ERROR "Unsupported target toolchain (only gcc is supported)")
 endif()
 
 
@@ -35,6 +35,7 @@ set_property(SOURCE ${STARTUP_ASM} PROPERTY LANGUAGE ASM)
 add_library(mbed-hal-st-stm32f401re
     ${STARTUP_ASM}
     ${STARTUP_SRC}
+    "lp_ticker.c"
     "PeripheralPins.c"
 )
 set_target_properties(mbed-hal-st-stm32f401re PROPERTIES
@@ -52,5 +53,4 @@ endif()
 target_link_libraries(mbed-hal-st-stm32f401re
     ${EXTRA_LINK_LIBS}
     mbed-hal
-    mbed-hal-st-nucleo-f401re
 )
