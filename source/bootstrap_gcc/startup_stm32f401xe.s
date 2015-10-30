@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file      startup_stm32f401xe.s
   * @author    MCD Application Team
-  * @version   V2.3.0
-  * @date      02-March-2015
+  * @version   V2.3.2
+  * @date      26-June-2015
   * @brief     STM32F401xExx Devices vector table for Atollic TrueSTUDIO toolchain. 
   *            This module performs:
   *                - Set the initial SP
@@ -77,7 +77,7 @@ defined in linker script */
   .weak  Reset_Handler
   .type  Reset_Handler, %function
 Reset_Handler:  
-  ldr   sp, =_estack    		 /* set stack pointer */
+  ldr   sp, =__stack       /* set stack pointer */
 
 /* Copy the data segment initializers from flash to SRAM */  
   movs  r1, #0
@@ -109,6 +109,8 @@ LoopFillZerobss:
 
 /* Call the clock system intitialization function.*/
   bl  SystemInit   
+/* Call uVisor initialization function. */
+  bl uvisor_init
 /* Call static constructors */
   //bl __libc_init_array
 /* Call the application's entry point.*/
@@ -145,8 +147,9 @@ Infinite_Loop:
   .size  g_pfnVectors, .-g_pfnVectors
     
 g_pfnVectors:
-  .word  _estack
+  .word  __stack
   .word  Reset_Handler
+
   .word  NMI_Handler
   .word  HardFault_Handler
   .word  MemManage_Handler

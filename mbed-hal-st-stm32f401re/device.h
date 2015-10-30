@@ -40,12 +40,15 @@
 #define DEVICE_ANALOGOUT        0 // Not present on this device
 
 #define DEVICE_SERIAL           1
+#define DEVICE_SERIAL_ASYNCH    0
 
 #define DEVICE_I2C              1
 #define DEVICE_I2CSLAVE         1
+#define DEVICE_I2C_ASYNCH       0
 
 #define DEVICE_SPI              1
 #define DEVICE_SPISLAVE         1
+#define DEVICE_SPI_ASYNCH       1
 
 #define DEVICE_RTC              1
 
@@ -64,6 +67,8 @@
 #define DEVICE_STDIO_MESSAGES   1
 
 #define DEVICE_ERROR_RED        0
+
+#define DEVICE_LOWPOWERTIMER    1
 
 #include "objects.h"
 
