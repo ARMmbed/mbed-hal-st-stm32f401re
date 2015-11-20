@@ -9,7 +9,11 @@
     "f401re",
     "nucleo"
   ],
-  "author": "Brendan Moran <brendan.moran@arm.com>",
+  "author": "wolfgang.betz@st.com",
+  "repository": {
+    "url": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re.git",
+    "type": "git"
+  },
   "homepage": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re",
   "licenses": [
     {
