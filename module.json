@@ -1,6 +1,6 @@
 {
   "name": "mbed-hal-st-stm32f401re",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "mbed HAL for stm32f401re microcontrollers",
   "keywords": [
     "mbed",
