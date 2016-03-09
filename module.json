@@ -26,7 +26,7 @@
   ],
   "dependencies": {
     "cmsis-core": "^1.0.0",
-    "uvisor-lib": "^1.0.2",
+    "uvisor-lib": ">=1.0.0,<3.0.0",
     "mbed-hal-st-stm32f4": ">=1.0.4"
   },
   "targetDependencies": {}
