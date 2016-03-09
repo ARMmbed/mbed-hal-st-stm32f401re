@@ -1,6 +1,6 @@
 {
   "name": "mbed-hal-st-stm32f401re",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "mbed HAL for stm32f401re microcontrollers",
   "keywords": [
     "mbed",
@@ -25,7 +25,9 @@
     "mbed-hal-st-stm32f401re"
   ],
   "dependencies": {
-    "cmsis-core": "*",
-    "uvisor-lib": "*"
-  }
+    "cmsis-core": "^1.0.0",
+    "uvisor-lib": "^1.0.2",
+    "mbed-hal-st-stm32f4": ">=1.0.4"
+  },
+  "targetDependencies": {}
 }
