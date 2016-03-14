@@ -39,8 +39,9 @@
 #define DEVICE_ANALOGIN         1
 #define DEVICE_ANALOGOUT        0 // Not present on this device
 
-#define DEVICE_SERIAL           1
-#define DEVICE_SERIAL_ASYNCH    1
+#define DEVICE_SERIAL            1
+#define DEVICE_SERIAL_ASYNCH     1
+#define DEVICE_SERIAL_ASYNCH_DMA 1
 
 #define DEVICE_I2C              1
 #define DEVICE_I2CSLAVE         1
