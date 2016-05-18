@@ -89,6 +89,25 @@
 #define HAL_PCD_MODULE_ENABLED
 #define HAL_HCD_MODULE_ENABLED
 
+/* ######################### Check Yotta target configuration ################### */
+
+#ifndef YOTTA_CFG_HARDWARE_EXTERNALCLOCK
+  #error A "config":{"hardware":{"externalClock":"<FREQ>"}} entry is required in either target.json or config.json
+#endif
+
+#ifndef YOTTA_CFG_HARDWARE_INTERNALCLOCK
+  #error A "config":{"hardware":{"internalClock":"<FREQ>"}} entry is required in either target.json or config.json
+#endif
+
+#if defined(HSE_VALUE)
+  #warning HSE_VALUE is deprecated. Using "config":{"hardware":{"externalClock":"<FREQ>"}} entry instead.
+  #undef HSE_VALUE
+#endif
+  
+#if defined(HSI_VALUE)
+  #warning HSI_VALUE is deprecated. Using "config":{"hardware":{"internalClock":"<FREQ>"}} entry instead.
+  #undef HSI_VALUE
+#endif
 
 /* ########################## HSE/HSI Values adaptation ##################### */
 /**
@@ -97,7 +116,7 @@
   *        (when HSE is used as system clock source, directly or through the PLL).  
   */
 #if !defined  (HSE_VALUE) 
-  #define HSE_VALUE    ((uint32_t)8000000) /*!< Value of the External oscillator in Hz */
+  #define HSE_VALUE    ((uint32_t)(YOTTA_CFG_HARDWARE_EXTERNALCLOCK)) /*!< Value of the External oscillator in Hz */
 #endif /* HSE_VALUE */
 
 #if !defined  (HSE_STARTUP_TIMEOUT)
@@ -110,7 +129,7 @@
   *        (when HSI is used as system clock source, directly or through the PLL). 
   */
 #if !defined  (HSI_VALUE)
-  #define HSI_VALUE    ((uint32_t)16000000) /*!< Value of the Internal oscillator in Hz*/
+  #define HSI_VALUE    ((uint32_t)(YOTTA_CFG_HARDWARE_INTERNALCLOCK)) /*!< Value of the Internal oscillator in Hz*/
 #endif /* HSI_VALUE */
 
 /**
